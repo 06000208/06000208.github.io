@@ -1,6 +1,6 @@
-# amber's homepage
+# amber's website
 
-A work in progress home page.
+A work in progress website.
 
 # credits, attributions
 
