@@ -92,6 +92,3 @@ a:focus, a:active {
   box-shadow: none;
   border-color: transparent;
 }
-.hidden {
-  display: none !important;
-}
