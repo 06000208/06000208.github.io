@@ -1,0 +1,46 @@
+#header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  background-color: #181818;
+}
+#title {
+  display: inline-block;
+  padding: 1em;
+  margin-right: auto;
+  flex-grow: 4;
+}
+.tab {
+  display: inline-block;
+  text-align: center;
+  flex-grow: 1;
+  background-color: #282829;
+}
+.tab a span {
+  transition: 0.3s;
+  display: inline-block;
+  background-color: #282829;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  padding: 1em;
+  width: 100%;
+}
+.tab a span:hover, .tab a:focus span {
+  background-color: #383838;
+  text-decoration: underline;
+}
+.tab a span:hover {
+  border: 2px solid #4c7dcf;
+}
+.tab a:focus span {
+  border: 2px dashed #4c7dcf;
+}
+.tab a:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+.hidden {
+  display: none;
+}
