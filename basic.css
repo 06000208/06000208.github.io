@@ -93,5 +93,5 @@ a:focus, a:active {
   border-color: transparent;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
