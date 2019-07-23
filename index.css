@@ -6,8 +6,7 @@ html {
   background-size: cover;
 }
 #header {
-  background-color: #2B2C31;
-  vertical-align: middle;
+  background-color: #181818;
 }
 body {
   background-color: rgba(18, 18, 18, 0.7);
@@ -22,18 +21,18 @@ body {
 #title {
   display: inline-block;
   padding: 1em;
-  flex-grow: 5;
+  flex-grow: 10;
 }
 .tab {
   display: inline-block;
-  background-color: #222222;
+  background-color: #282829;
   padding: 1em;
   transition: 0.3s;
   flex-grow: 1;
   text-align: center;
 }
 .tab:hover {
-  background-color: #333333;
+  background-color: #383838;
 }
 
 .hidden {
