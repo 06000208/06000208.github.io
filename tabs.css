@@ -25,16 +25,16 @@
   padding: 1em;
   width: 100%;
 }
-.tab a span:hover, .tab a:focus span {
+.tab a span:hover, .tab a:focus span, .tab a:active span {
   background-color: #383a3e;
+}
+.tab a:hover {
+  text-decoration: underline;
 }
 .tab a span:hover {
   border: 2px solid #4c7dcf;
 }
-.tab a:focus span {
-  border: 2px dashed #39CCCC;
-}
-.tab a:active span {
+.tab a:focus span, .tab a:active span {
   border: 2px solid #39CCCC;
 }
 .tab a:focus, .tab a:active {
