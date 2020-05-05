@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./basic.css">
+  <link rel="stylesheet" href="./holygrid.css">
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/emojis/289331098511474689.png" />
+  <title>cndycrn/emoji</title>
+  <meta property="og:title" content="cndycrn/emoji" />
+  <meta name="description" content="discord emoji grid">
+  <meta property="og:description" content="discord emoji grid" />
+  <meta name="author" content="https://github.com/06000208">
+  <link rel="author" href="https://github.com/06000208" />
+  <style>
+    #right {
+      max-width: 232px;
+    }
+    #input {
+      resize: vertical;
+      width: 200px;
+      min-height: 200px;
+    }
+    img {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      margin: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">discord emoji grid • <a href="./index.html">back to index</a></div>
+  <div id="left">
+    <textarea id="input" oninput="update();" placeholder="Put discord emoji ids here..."></textarea>
+  </div>
+  <div id="content"></div>
+  <div id="right">
+    <p>Example Ids:</p>
+    <pre>289331098511474689
+677472722565070868
+304494097681612810
+304494097627086859</pre>
+    <p>Valid Separators:</p>
+    <ul>
+      <li>Newlines</li>
+      <li>Spaces</li>
+      <li>,</li>
+      <li>Anything that isn't a number</li>
+    </ul>
+  </div>
+  <div id="footer">This makes use of assets on Discord's cdn. This page has no affiliation with Discord in any way,
+    shape, or form.</div>
+  <script>
+    let emojis = [];
+    let failed = [];
+    const regexp = /([0-9])+/g;
+    function fileExists(url) {
+      const http = new XMLHttpRequest();
+      http.open('HEAD', url, false);
+      http.send();
+      return http.status !== 404;
+    };
+    function append(url) {
+      const emoji = document.createElement("img");
+      emoji.src = url;
+      document.getElementById("content").appendChild(emoji);
+    }
+    function add(id) {
+      if (failed.includes(id)) return;
+      if (emojis.includes(id)) return;
+      const url = `https://cdn.discordapp.com/emojis/${id}.png`;
+      if (fileExists(url)) {
+        emojis.push(id);
+        append(url);
+      } else {
+        failed.push(id);
+      }
+    };
+    function update() {
+      const matches = document.getElementById("input").value.matchAll(regexp);
+      for (const match of matches) {
+        add(match[0]);
+      }
+    };
+  </script>
+</body>
+
+</html>
