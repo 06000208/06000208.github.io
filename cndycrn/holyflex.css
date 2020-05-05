@@ -14,6 +14,8 @@ body {
   flex-grow: 1;
 }
 
+/* responsive media query */
+
 @media only screen and (max-width: 700px) {
   #main {
     flex-direction: column;
