@@ -27,29 +27,24 @@ body > div {
   padding: 16px;
 }
 
-/* background colors & grid area specifications */
+/* grid area specifications */
 
 #header {
   grid-area: header;
-  background-color: rgba(255, 255, 0, 0.3);
 }
 
 #left {
   grid-area: left;
-  background-color: rgba(255, 0, 0, 0.3);
 }
 
 #content {
   grid-area: content;
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
 #right {
   grid-area: right;
-  background-color: rgba(0, 0, 255, 0.3);
 }
 
 #footer {
   grid-area: footer;
-  background-color: rgba(0, 255, 255, 0.3);
 }

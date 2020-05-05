@@ -25,25 +25,3 @@ body {
 #main > div, #header, #footer {
   padding: 16px;
 }
-
-/* background colors */
-
-#header {
-  background-color: rgba(255, 255, 0, 0.3);
-}
-
-#left {
-  background-color: rgba(255, 0, 0, 0.3);
-}
-
-#content {
-  background-color: rgba(0, 255, 0, 0.3);
-}
-
-#right {
-  background-color: rgba(0, 0, 255, 0.3);
-}
-
-#footer {
-  background-color: rgba(0, 255, 255, 0.3);
-}
