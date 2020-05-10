@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./basic.css">
+  <link rel="stylesheet" href="./holygrid.css">
   <link rel="icon" type="image/png" href="./cndycrn.png" />
   <meta property="og:image" content="https://06000208.github.io/cndycrn/cndycrn.png">
   <meta name="twitter:image" content="https://06000208.github.io/cndycrn/cndycrn.png">
@@ -15,16 +16,34 @@
   <meta name="author" content="https://github.com/06000208">
   <link rel="author" href="https://github.com/06000208" />
   <style>
-    body {
-      padding: 2em;
+    #special {
+      background-color: rgba(100,100,100,0.3);
+    }
+    textarea {
+      width: 100%;
+      resize: none;
     }
   </style>
 </head>
 
 <body>
-  <p>Right Click --> View Page Source</p>
-  <p>Above may differ across browsers, but the point is that this page doesn't actually have the same meta info that shows up in discord as an embed when you tack a period onto the end of the link :)</p>
-  <p>P.S. What this is supposed to demo might not actually occur anymore, can't test at the moment.</p>
+  <div id="header">discord url parsing quirk • <a href="./index">back</a></div>
+  <div id="left"></div>
+  <div id="content">
+    <p>Right Click --> View Page Source</p>
+    <p>That instruction for how to view the source code of this page might differ across browsers, but the point is that this page doesn't actually have the same meta info that shows up in discord as an embed if you tack a period on the end of the link. :)</p>
+    <h2>How To</h2>
+    <p>To see what I'm talking about, post the following link in discord, including the period on the end.</p>
+    <textarea>https://06000208.github.io/cndycrn/discordurlparsing.</textarea>
+    <p>Now post the link in discord without the period on the end.</p>
+    <h2>Huh? Why does that happen?</h2>
+    <p>Discord's code that parses the link and turns it into a hyperlink doesn't include the period, so it will always link to this page regardless of whether or not you include the period.</p>
+    <p>On the other hand, the code that parses links in your message and creates the embeds does include the period if it's there, which causes the discrepancy, as the the metadata in the embed is indeed from a different page</p>
+    <p>You can see this even more clearly by following the hyperlinked smiley face in the embed when you include the period, as that goes to the page that it actually used for the embed.</p>
+  </div>
+  <div id="right"></div>
+  <div id="footer"></div>
 </body>
 
 </html>
+
