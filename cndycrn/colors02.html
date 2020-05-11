@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./basic.css">
+  <link rel="icon" type="image/png" href="./cndycrn.png" />
+  <meta property="og:image" content="https://06000208.github.io/cndycrn/cndycrn.png">
+  <meta name="twitter:image" content="https://06000208.github.io/cndycrn/cndycrn.png">
+  <title>cndycrn/tunnel</title>
+  <meta property="og:title" content="cndycrn/tunnel" />
+  <meta name="description" content="flexbox tunnel">
+  <meta property="og:description" content="flexbox tunnel" />
+  <meta name="author" content="https://github.com/06000208">
+  <link rel="author" href="https://github.com/06000208" />
+  <style>
+    .red {
+      background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    .green {
+      background-color: rgba(0, 255, 0, 0.1);
+    }
+
+    .blue {
+      background-color: rgba(0, 0, 255, 0.1);
+    }
+
+    div {
+      border-radius: 3px;
+    }
+
+    body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 2px 2px;
+      grid-template-areas:
+        "a a a a a a a a a a a a a a b"
+        "e e e e e e e e e e e e e f b"
+        "d i i i i i i i i i i i j f b"
+        "d h m m m m m m m m m n j f b"
+        "d h l q q q q q q q r n j f b"
+        "d h l p u u u u u v r n j f b"
+        "d h l p t y y y y v r n j f b"
+        "d h l p t x ac ac z v r n j f b"
+        "d h l p t x ab aa aa v r n j f b"
+        "d h l p t x w w w w r n j f b"
+        "d h l p t s s s s s s n j f b"
+        "d h l p o o o o o o o o j f b"
+        "d h l k k k k k k k k k k f b"
+        "d h g g g g g g g g g g g g b"
+        "d c c c c c c c c c c c c c c";
+      animation-name: rot;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes rot {
+      0% {
+        text-align: start;
+      }
+      25% {
+        text-align: center;
+      }
+      50% {
+        text-align: right;
+      }
+      75% {
+        text-align: center;
+      }
+      100% {
+        text-align: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1-5 -->
+  <div style="grid-area: a;" class="red">a</div>
+  <div style="grid-area: b;" class="green">b</div>
+  <div style="grid-area: c;" class="blue">c</div>
+  <div style="grid-area: d;">d</div>
+  <div style="grid-area: e;">e</div>
+  <!-- 6-10 -->
+  <div style="grid-area: f;" class="red">f</div>
+  <div style="grid-area: g;" class="green">g</div>
+  <div style="grid-area: h;" class="blue">h</div>
+  <div style="grid-area: i;">i</div>
+  <div style="grid-area: j;">j</div>
+  <!-- 11-15 -->
+  <div style="grid-area: k" class="red">k</div>
+  <div style="grid-area: l" class="green">l</div>
+  <div style="grid-area: m" class="blue">m</div>
+  <div style="grid-area: n">n</div>
+  <div style="grid-area: o">o</div>
+  <!-- 16-20 -->
+  <div style="grid-area: p;" class="red">p</div>
+  <div style="grid-area: q;" class="green">q</div>
+  <div style="grid-area: r;" class="blue">r</div>
+  <div style="grid-area: s;">s</div>
+  <div style="grid-area: t;">t</div>
+  <!-- 20-25 -->
+  <div style="grid-area: u;" class="red">u</div>
+  <div style="grid-area: v;" class="green">v</div>
+  <div style="grid-area: w;" class="blue">w</div>
+  <div style="grid-area: x;">x</div>
+  <div style="grid-area: y;">y</div>
+  <!-- 26-29 -->
+  <div style="grid-area: z;" class="red">z</div>
+  <div style="grid-area: aa;" class="green">aa</div>
+  <div style="grid-area: ab;" class="blue">ab</div>
+  <div style="grid-area: ac;" >ac</div>
+</body>
+
+</html>
