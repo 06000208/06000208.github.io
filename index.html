@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title id="title">06000208</title>
+    <meta property="og:title" content="06000208" />
+    <meta property="og:site_name" content="06000208" />
+    <meta name="description" content="amber's personal github pages site" />
+    <meta property="og:description" content="amber's personal github pages site" />
+    <meta name="theme-color" content="#9e90e9" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #main {
+            flex-grow: 1;
+        }
+
+        #main,
+        #footer {
+            max-width: 700px;
+        }
+
+        .icon-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .icon {
+            margin: 2px;
+            max-height: 3rem;
+            max-width: 3rem;
+            border-radius: var(--corners);
+        }
+
+        .icon.svg {
+            height: 3rem;
+            width: 3rem;
+        }
+
+        .icon.light {
+            /* Hack to make external svgs #eeeeee */
+            filter: invert(97%) sepia(29%) saturate(266%) hue-rotate(186deg) brightness(115%) contrast(87%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="content">
+        <h2>06000208.github.io</h2>
+        <p>Welcome to my personal github pages site. I'm amber, known online as 06000208 or substrberry.</p>
+        <p>I'm a developer, and have made websites, userscripts, discord bots, source engine maps, and garry's mod addons, among other things.</p>
+        <p>If you want to contact me, use my <a href="https://discord.gg/ZRXkKV5H2X">discord server</a> and ping me, I'm 06000208 on discord.</p>
+        <div class="icon-row">
+            <a href="https://discord.gg/ZRXkKV5H2X">
+                <img class="icon svg light" src="https://cdn.jsdelivr.net/npm/simple-icons@v10.0.0/icons/discord.svg" alt="Discord">
+            </a>
+            <a href="https://github.com/06000208">
+                <img class="icon svg light" src="https://cdn.jsdelivr.net/npm/simple-icons@v10.0.0/icons/github.svg" alt="Github">
+            </a>
+            <a href="https://steamcommunity.com/id/06000208">
+                <img class="icon svg light" src="https://cdn.jsdelivr.net/npm/simple-icons@v10.0.0/icons/steam.svg" alt="Steam">
+            </a>
+            <a href="https://twitter.com/substrberry">
+                <img class="icon svg light" src="https://cdn.jsdelivr.net/npm/simple-icons@v10.0.0/icons/twitter.svg" alt="Twitter">
+            </a>
+            <a href="https://myanimelist.net/profile/06000208">
+                <img class="icon svg light" style="position: relative; top: 3px;" src="https://cdn.jsdelivr.net/npm/simple-icons@v10.0.0/icons/myanimelist.svg" alt="MyAnimeList">
+            </a>
+            <a href="https://substrberry.neocities.org/">
+                <img class="icon svg" src="./assets/plaincat.svg" alt="Neocities">
+            </a>
+        </div>
+        <!-- <h2>Stuff hosted here</h2>
+        <p>I've used github pages to host some of the things I've made:</p>
+        <ul>
+            <li><a href="https://06000208.github.io/r2modman-profile-viewer">An r2modman/thunderstore profile viewer</a></li>
+        </ul> -->
+    </div>
+    <div id="footer" class="content">
+        <p>Hosted by <a href="https://pages.github.com/">github pages</a>, Licensed under CC0 1.0 Universal</p>
+    </div>
+</body>
+
+</html>
